@@ -1,0 +1,54 @@
+{
+    "name": "yidash",
+    "version": "1.2.1",
+    "description": "yidash（易大师）一万个JavaScript实用方法库",
+    "type": "module",
+    "private": false,
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    },
+    "exports": {
+        ".": "./index.js",
+        "./yidashLibNames.js": "./yidashLibNames.js"
+    },
+    "scripts": {
+        "gen": "jsdoc -c jsdoc.json"
+    },
+    "files": [
+        "lib/",
+        "index.js",
+        "LICENSE",
+        "package.json",
+        "README.md",
+        "yidashLibNames.js"
+    ],
+    "keywords": [
+        "lodash",
+        "utils",
+        "helper",
+        "help"
+    ],
+    "author": "chensuiyi <bimostyle@qq.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chenbimo/yidash"
+    },
+    "homepage": "https://yidash.dev",
+    "dependencies": {
+        "date-fns": "^3.6.0"
+    },
+    "devDependencies": {
+        "docdash-extended-chensuiyi": "^1.1.0",
+        "jsdoc": "^4.0.3",
+        "lint-staged": "^15.2.7",
+        "prettier": "^3.3.3",
+        "simple-git-hooks": "^2.11.1"
+    },
+    "simple-git-hooks": {
+        "pre-commit": "pnpm lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,css,scss,less,ts,jsx,vue,html,json,md,yaml}": "prettier --write"
+    }
+}
