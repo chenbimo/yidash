@@ -1,6 +1,6 @@
 {
     "name": "yidash",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "description": "yidash（易大师）一万个JavaScript实用方法库",
     "type": "module",
     "private": false,
