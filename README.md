@@ -1,6 +1,6 @@
 # yidash（易大师）一万个JavaScript实用方法库
 
-`警告⚠️`：未发布v2.0.0之前，均为不稳定版本，慎用！！！
+`警告⚠️`：未发布**v2.0.0**之前，均为不稳定版本，慎用！！！
 
 ![logo](https://static.yicode.tech/logo/yidash-logo.png)
 
