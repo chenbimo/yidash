@@ -13,6 +13,7 @@ export { yd_browser_exitFullScreen } from './lib/yd_browser_exitFullScreen.js';
 export { yd_browser_openFullscreen } from './lib/yd_browser_openFullscreen.js';
 export { yd_core_getTag } from './lib/yd_core_getTag.js';
 export { yd_data_sortBy } from './lib/yd_data_sortBy.js';
+export { yd_datetime_customFormat } from './lib/yd_datetime_customFormat.js';
 export { yd_datetime_leftTime } from './lib/yd_datetime_leftTime.js';
 export { yd_datetime_relativeTime } from './lib/yd_datetime_relativeTime.js';
 export { yd_date_week } from './lib/yd_date_week.js';
