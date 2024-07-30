@@ -1,5 +1,41 @@
 {
     "地址": {
         "displayName": "地址"
+    },
+    "数组": {
+        "displayName": "数组"
+    },
+    "浏览器": {
+        "displayName": "浏览器"
+    },
+    "基础": {
+        "displayName": "基础"
+    },
+    "对象": {
+        "displayName": "对象"
+    },
+    "判断": {
+        "displayName": "判断"
+    },
+    "字符串": {
+        "displayName": "字符串"
+    },
+    "数字": {
+        "displayName": "数字"
+    },
+    "日期": {
+        "displayName": "日期"
+    },
+    "日期时间": {
+        "displayName": "日期时间"
+    },
+    "树结构": {
+        "displayName": "树结构"
+    },
+    "帮助": {
+        "displayName": "帮助"
+    },
+    "正则": {
+        "displayName": "正则"
     }
 }
