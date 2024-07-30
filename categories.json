@@ -35,6 +35,9 @@
     "帮助": {
         "displayName": "帮助"
     },
+    "加解密": {
+        "displayName": "加解密"
+    },
     "正则": {
         "displayName": "正则"
     }
