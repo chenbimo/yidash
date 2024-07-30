@@ -4,15 +4,15 @@
 
 ![logo](https://static.yicode.tech/logo/yidash-logo.png)
 
-### 🏠 官网
+## 🏠 官网
 
 [文档官网 https://yidash.dev](https://yidash.dev)
 
-### 🛖 仓库
+## 🛖 仓库
 
-> [github https://github.com/chenbimo/yidash](https://github.com/chenbimo/yidash)
+[github https://github.com/chenbimo/yidash](https://github.com/chenbimo/yidash)
 
-### 🧊 安装
+## 🧊 安装
 
 ```bash
 npm install yidash
@@ -20,7 +20,7 @@ npm install yidash
 pnpm add yidash
 ```
 
-### 🍼 使用
+## 🍼 使用
 
 `注意⚠️`：本项目暂时只提供 `ESM` 包。
 
@@ -44,15 +44,15 @@ console.log(validNumber('1.2')); // 1.20
 console.log(validNumber('1.2.')); // 1.20
 ```
 
-### 🎁 贡献和福利
+## 🎁 贡献和福利
 
-#### 贡献者交流群
+### **贡献者交流群**
 
 加笔者微信 `chensuiyime`，注明 `yidash` ，拉你进微信交流群。
 
 群内将解答关于代码贡献相关的问题。
 
-#### 代码贡献步骤
+### **代码贡献步骤**
 
 1. 访问本仓库。
 2. fork本仓库。
@@ -62,20 +62,27 @@ console.log(validNumber('1.2.')); // 1.20
 6. 发起pull request。
 7. 等待笔者验证与合并。
 
-#### 不能这样做
+**注意**：只提交lib中的函数到本仓库合并即可，其他文件不要提交。
+
+### **不能这样做**
 
 1. 不能引入很多包，需要导包的函数要与我沟通确认，尽量不依赖第三方包。
 2. 不能写很复杂的函数，不能超过500行，要小而美。
 3. 每个文件的作者，一经提交，其他人后续修改也不能改其原作者。
 
-#### 必须这么做
+### **必须这么做**
 
 1. 必须写JSDoc注释和使用案例，不然别人看不懂，不知道怎么用。
 2. 必须写明函数作者，具体参考JSDoc文档。
 3. 必须4格缩进，不喜欢的请不要参与本项目。
 4. 必须按照如下格式写清楚提交信息。
 
-#### 函数开发规则
+### **没有这些玩意**
+
+1. 没有 `TypeScript`。
+2. 没有 `Eslint`。
+
+### **函数开发规则**
 
 文件名必须是 `yd_[类型]_函数名`，`yd` 是 `yidash` 的缩写。
 
@@ -85,7 +92,7 @@ console.log(validNumber('1.2.')); // 1.20
 
 能用 `const` 的地方，必须用 `const`。
 
-#### 代码提交格式
+### **代码提交格式**
 
 `提交主题: 提交具体内容`
 
@@ -95,7 +102,7 @@ console.log(validNumber('1.2.')); // 1.20
 -   `代码重构: yd_number_thousands重新设计`
 -   `新增函数: 增加yd_is_array函数`
 
-#### 贡献者福利
+### **贡献者福利**
 
 1. 增加开源参与度。
 2. 体会开源的乐趣。
