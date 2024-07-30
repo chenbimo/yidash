@@ -1,6 +1,6 @@
 {
     "name": "yidash",
-    "version": "1.2.6",
+    "version": "1.3.2",
     "description": "yidash（易大师）一万个JavaScript实用方法库",
     "type": "module",
     "private": false,
@@ -39,7 +39,7 @@
         "date-fns": "^3.6.0"
     },
     "devDependencies": {
-        "docdash-extended-chensuiyi": "^1.1.0",
+        "docdash-extended-chensuiyi": "^1.1.1",
         "jsdoc": "^4.0.3",
         "lint-staged": "^15.2.7",
         "prettier": "^3.3.3",

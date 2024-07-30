@@ -1,9 +1,9 @@
 {
     "tags": {
-        "allowUnknownTags": false
+        "allowUnknownTags": true
     },
     "source": {
-        "include": "./lib",
+        "include": ["./lib", "README.md"],
         "includePattern": "\\.js$",
         "excludePattern": "(node_modules/|docs)"
     },
@@ -26,6 +26,14 @@
         "search": true,
         "collapse": true,
         "typedefs": true,
-        "removeQuotes": "none"
+        "removeQuotes": "none",
+        "menu": {
+            "Github": {
+                "href": "https://github.com/chenbimo/yidash",
+                "target": "_blank",
+                "class": "menu-item",
+                "id": "repository"
+            }
+        }
     }
 }
