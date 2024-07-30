@@ -1,5 +1,4 @@
 export { yd_address_areaMatch } from './lib/yd_address_areaMatch.js';
-export { yd_address_short } from './lib/yd_address_short.js';
 export { yd_array_diffBoth } from './lib/yd_array_diffBoth.js';
 export { yd_array_diffFirst } from './lib/yd_array_diffFirst.js';
 export { yd_browser_exitFullScreen } from './lib/yd_browser_exitFullScreen.js';
@@ -46,6 +45,7 @@ export { yd_string_camelCase } from './lib/yd_string_camelCase.js';
 export { yd_string_capitalize } from './lib/yd_string_capitalize.js';
 export { yd_string_displace } from './lib/yd_string_displace.js';
 export { yd_string_kebabCase } from './lib/yd_string_kebabCase.js';
+export { yd_string_short } from './lib/yd_string_short.js';
 export { yd_string_snakeCase } from './lib/yd_string_snakeCase.js';
 export { yd_tree_array2Tree } from './lib/yd_tree_array2Tree.js';
 export { yd_tree_traverse } from './lib/yd_tree_traverse.js';
