@@ -54,3 +54,4 @@ export { yd_string_short } from './lib/yd_string_short.js';
 export { yd_string_snakeCase } from './lib/yd_string_snakeCase.js';
 export { yd_tree_array2Tree } from './lib/yd_tree_array2Tree.js';
 export { yd_tree_traverse } from './lib/yd_tree_traverse.js';
+export { yd_is_phone } from './lib/yd_is_phone.js';
