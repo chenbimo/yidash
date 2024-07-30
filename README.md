@@ -4,15 +4,15 @@
 
 ![logo](https://static.yicode.tech/logo/yidash-logo.png)
 
-### 官网
+### 🏠 官网
 
 [文档官网 https://yidash.dev](https://yidash.dev)
 
-### 仓库
+### 🛖 仓库
 
 > [github https://github.com/chenbimo/yidash](https://github.com/chenbimo/yidash)
 
-### 安装
+### 🧊 安装
 
 ```bash
 npm install yidash
@@ -20,7 +20,7 @@ npm install yidash
 pnpm add yidash
 ```
 
-### 使用
+### 🍼 使用
 
 `注意⚠️`：本项目暂时只提供 `ESM` 包。
 
@@ -44,7 +44,13 @@ console.log(validNumber('1.2')); // 1.20
 console.log(validNumber('1.2.')); // 1.20
 ```
 
-### 贡献和福利
+### 🎁 贡献和福利
+
+#### 贡献者交流群
+
+加笔者微信 `chensuiyime`，注明 `yidash` ，拉你进微信交流群。
+
+群内将解答关于代码贡献相关的问题。
 
 #### 代码贡献步骤
 
