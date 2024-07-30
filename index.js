@@ -49,3 +49,5 @@ export { yd_string_short } from './lib/yd_string_short.js';
 export { yd_string_snakeCase } from './lib/yd_string_snakeCase.js';
 export { yd_tree_array2Tree } from './lib/yd_tree_array2Tree.js';
 export { yd_tree_traverse } from './lib/yd_tree_traverse.js';
+export {yd_debounce} from './lib/yd_debounce.js';
+export {yd_throttle} from './lib/yd_throttle.js';
