@@ -1,3 +1,5 @@
 node_modules
 docs
 *lock.*
+index.js
+yidashLibNames.js
