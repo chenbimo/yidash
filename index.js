@@ -58,3 +58,6 @@ export { yd_string_snakeCase } from './lib/yd_string_snakeCase.js';
 export { yd_string_trimAll } from './lib/yd_string_trimAll.js';
 export { yd_tree_array2Tree } from './lib/yd_tree_array2Tree.js';
 export { yd_tree_traverse } from './lib/yd_tree_traverse.js';
+export { yd_hash_generateHashCode } from "./lib/yd_hash_generateHashCode.js";
+export { yd_object_serialize } from './lib/yd_object_serialize.js';
+export { yd_array_uniqueByFields } from './lib/yd_array_uniqueByFields.js';
