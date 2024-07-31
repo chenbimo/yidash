@@ -13,7 +13,8 @@
         "./yidashLibNames.js": "./yidashLibNames.js"
     },
     "scripts": {
-        "gen": "jsdoc -c jsdoc.json",
+        "gen": "node generate.js",
+        "docs": "jsdoc -c jsdoc.json",
         "test": "vitest",
         "test-ui": "vitest --ui"
     },
@@ -41,13 +42,13 @@
         "date-fns": "^3.6.0"
     },
     "devDependencies": {
-        "@vitest/ui": "^2.0.4",
+        "@vitest/ui": "^2.0.5",
         "docdash-extended-chensuiyi": "^1.1.1",
         "jsdoc": "^4.0.3",
         "lint-staged": "^15.2.7",
         "prettier": "^3.3.3",
         "simple-git-hooks": "^2.11.1",
-        "vitest": "^2.0.4"
+        "vitest": "^2.0.5"
     },
     "simple-git-hooks": {
         "pre-commit": "pnpm lint-staged"

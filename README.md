@@ -37,8 +37,8 @@ console.dir(yd_regexp_trainNumber);
 const validNumber = yd_number_validNumber();
 console.log(validNumber(1.111)); // 1.11
 console.log(validNumber(1.571333)); // 1.57
-console.log(validNumber('1..221333')); // 1.57
-console.log(validNumber('1.2213.33')); // 1.57
+console.log(validNumber('1..221333')); // 1.22
+console.log(validNumber('1.2213.33')); // 1.22
 console.log(validNumber('1.')); // 1.
 console.log(validNumber('1.2')); // 1.20
 console.log(validNumber('1.2.')); // 1.20
@@ -72,11 +72,17 @@ console.log(validNumber('1.2.')); // 1.20
 
 ### **必须这么做**
 
-1. 必须写JSDoc注释和使用案例，不然别人看不懂，不知道怎么用。
-2. 必须写明函数作者，具体参考JSDoc文档。
-3. 必须4格缩进，不喜欢的请不要参与本项目。
-4. 必须按照如下格式写清楚提交信息。
-5. 必须一个函数一个文件。
+1. 必须写 `JSDoc注释`，不然别人看不懂，不知道怎么用。
+2. 必须写 `函数作者`，标签为 `@author`。
+3. 必须写 `案例说明`，标签为 `@example`。
+4. 必须写 `测试用例`，在 `test目录` 下，与 `lib目录` 中的结构一一对应。
+5. 必须 `4格缩进`，不喜欢的请不要参与本项目。
+6. 必须按 `git提交格式` 写清楚提交信息。
+7. 必须 `一个函数一个文件`，不能多个导出函数写到一个文件中。
+8. 函数名称必须清楚地表达函数作用。
+9. 函数必须使用 `default` 默认导出，且导出的必须是一个 `箭头函数`。
+10. 能用 `const` 定义的地方尽量用 `const`。
+11. 不能使用 `var` 定义变量。
 
 ### **没有这些玩意**
 
@@ -85,15 +91,19 @@ console.log(validNumber('1.2.')); // 1.20
 
 ### **函数开发规则**
 
-文件名必须是 `yd_[类型]_函数名`，`yd` 是 `yidash` 的缩写。
+`lib` 目录下，每一个目录是一个函数类型集合。
 
-比如`yd_is_number`，`is` 表示判断，`number` 表示数字，这是一个判断数字的函数。
+每个目录下，不能再创建目录，只能创建函数文件。
 
-函数名必须具名导出，不能使用 `default` 默认导出，而且要跟文件名一致。
+函数名称尽量简短且清楚地表达函数的作用。
 
-能用 `const` 的地方，必须用 `const`。
+对外导出的函数名称 = 前缀 + 目录 + 函数。
 
-### **代码提交格式**
+比如 `lib/is/array.js` 函数，则其对外导出的函数名称是 `yd_is_array`。
+
+这个函数名称会自动生成，不要手动书写。
+
+### **git提交格式**
 
 `提交主题: 提交具体内容`
 
@@ -108,5 +118,10 @@ console.log(validNumber('1.2.')); // 1.20
 1. 增加开源参与度。
 2. 体会开源的乐趣。
 3. 为自己的职业经历增加一个彩蛋。
-4. 函数会进行署名，你将被每一个使用yidash的人看到。
+4. 你的函数将会被每一个使用yidash的人看到。
 5. 额外获得VSCode扩展fnMap永久注册码一枚。
+
+**fnMap地址**：`https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map`。
+
+1. 每个注册用户可以免费领取一个永久注册码（登录自动领取）。
+2. 每个贡献者可以额外领取一个（私聊我即可）。
