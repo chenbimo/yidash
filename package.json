@@ -14,7 +14,8 @@
     },
     "scripts": {
         "gen": "jsdoc -c jsdoc.json",
-        "test": "vitest"
+        "test": "vitest",
+        "test-ui": "vitest --ui"
     },
     "files": [
         "lib/",
