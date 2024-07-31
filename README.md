@@ -83,6 +83,8 @@ console.log(validNumber('1.2.')); // 1.20
 9. 函数必须使用 `default` 默认导出，且导出的必须是一个 `箭头函数`。
 10. 能用 `const` 定义的地方尽量用 `const`。
 11. 不能使用 `var` 定义变量。
+12. `不要炫技`，用尽量简单易懂的方式，宁愿多写几行，也不要增加理解难度。
+13. 尽量不要函数引入函数，每个函数尽量独立，不依赖其他函数。
 
 ### **没有这些玩意**
 
@@ -125,3 +127,14 @@ console.log(validNumber('1.2.')); // 1.20
 
 1. 每个注册用户可以免费领取一个永久注册码（登录自动领取）。
 2. 每个贡献者可以额外领取一个（私聊我即可）。
+
+### 贡献者
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->

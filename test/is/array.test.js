@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { yd_is_array } from '../../index.js';
+import yd_is_array from '../../lib/is/array.js';
 
 describe('isArray', () => {
     it('should return `true` for arrays', () => {
