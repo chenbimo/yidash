@@ -10,7 +10,7 @@ dirs.forEach((dir) => {
         if (stat.isFile() && file.endsWith('.js')) {
             let fileName = basename(file, '.js');
             libNames.push(`${fileName}`);
-            fileData.push(`export { yd_${dir}_${fileName} } from './lib/${dir}/${file}';\r\n`);
+            fileData.push(`export { default as yd_${dir}_${fileName} } from './lib/${dir}/${file}';\r\n`);
         } else {
             console.log(`${dir}/${file}不是一个函数文件`);
         }
