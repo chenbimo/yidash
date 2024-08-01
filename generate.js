@@ -23,7 +23,10 @@ readdirSync(dirPath).forEach((dir) => {
             const filePath = resolve(dirPath, dir, file);
             const testFilePath = resolve('test', dir, `${fileName}.test.js`);
             libNames.push(`yd_${dir}_${fileName}`);
-            fileData.push(`export { default as yd_${dir}_${fileName} } from './lib/${dir}/${file}';\r\n`);
+            fileData.push(
+                //
+                `export { default as yd_${dir}_${fileName} } from './lib/${dir}/${file}';\r\n`
+            );
             // 判断是否有相关标签
             const fileData2 = readFileSync(filePath, { encoding: 'utf8' });
             if (!fileData2.includes('@author')) {
@@ -48,15 +51,14 @@ describe('yd_${dir}_${fileName}', () => {
     it('默认单测', () => {
         expect(true).toBe(true);
     });
-});`,
-                )
+});`
+                );
             }
-        }
-        else {
+        } else {
             console.log(`${dir}/${file}不是一个函数文件`);
         }
     });
-})
+});
 
 // 没有匹配的函数测试用例放到独立文件中
 readdirSync(testPath).forEach((dir) => {
@@ -67,7 +69,7 @@ readdirSync(testPath).forEach((dir) => {
             moveSync(resolve(testPath, dir, file), resolve(testPendPath, dir, file));
         }
     });
-})
+});
 writeFileSync('./index.js', fileData.join(''));
 writeFileSync('./yidashLibNames.js', `export const yidashLibNames = ${JSON.stringify(libNames)}`);
 console.log('数据生成完毕');
