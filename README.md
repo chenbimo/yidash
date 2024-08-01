@@ -97,7 +97,7 @@ console.log(validNumber('1.2.')); // 1.20
 
 `lib` 目录下，每一个目录是一个函数类型集合。
 
-每个目录下，不能再创建目录，只能创建函数文件。
+每个目录下，不能再创建目录，只能创建函数文件。 
 
 函数名称尽量简短且清楚地表达函数的作用。
 
@@ -129,14 +129,3 @@ console.log(validNumber('1.2.')); // 1.20
 
 1. 每个注册用户可以免费领取一个永久注册码（登录自动领取）。
 2. 每个贡献者可以额外领取一个（私聊我即可）。
-
-### 贡献者
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
