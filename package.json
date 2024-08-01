@@ -51,7 +51,6 @@
         "del-cli": "^5.1.0",
         "docdash-extended-chensuiyi": "^1.1.1",
         "eslint": "9.x",
-        "eslint-plugin-jsdoc": "^48.10.2",
         "jsdoc": "^4.0.3",
         "lint-staged": "^15.2.7",
         "simple-git-hooks": "^2.11.1",
