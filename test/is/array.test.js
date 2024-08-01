@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import yd_is_array from '../../lib/is/array.js';
 
-describe('isArray', () => {
+describe('yd_is_array', () => {
     it('should return `true` for arrays', () => {
         expect(yd_is_array([1, 2, 3])).toBe(true);
     });

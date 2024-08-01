@@ -27,6 +27,8 @@
         "collapse": true,
         "typedefs": true,
         "removeQuotes": "none",
+        "navLevel": 5,
+        "collapse": true,
         "menu": {
             "Github": {
                 "href": "https://github.com/chenbimo/yidash",
