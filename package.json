@@ -1,52 +1,59 @@
 {
     "name": "yidash",
-    "version": "1.3.2",
-    "description": "yidash（易大师）一万个JavaScript实用方法库",
     "type": "module",
+    "version": "1.3.2",
     "private": false,
+    "description": "yidash（易大师）一万个JavaScript实用方法库",
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org"
     },
-    "exports": {
-        ".": "./index.js",
-        "./yidashLibNames.js": "./yidashLibNames.js"
+    "author": "chensuiyi <bimostyle@qq.com>",
+    "homepage": "https://yidash.dev",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chenbimo/yidash"
     },
-    "scripts": {
-        "gen": "node generate.js",
-        "docs": "jsdoc -c jsdoc.json",
-        "test": "vitest",
-        "test-ui": "vitest --ui"
-    },
-    "files": [
-        "lib/",
-        "index.js",
-        "LICENSE",
-        "package.json",
-        "README.md",
-        "yidashLibNames.js"
-    ],
     "keywords": [
         "lodash",
         "utils",
         "helper",
         "help"
     ],
-    "author": "chensuiyi <bimostyle@qq.com>",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/chenbimo/yidash"
+    "exports": {
+        ".": "./index.js",
+        "./yidashLibNames.js": "./yidashLibNames.js"
     },
-    "homepage": "https://yidash.dev",
+    "files": [
+        "LICENSE",
+        "README.md",
+        "index.js",
+        "lib/",
+        "package.json",
+        "yidashLibNames.js"
+    ],
+    "scripts": {
+        "gen": "node generate.js",
+        "docs": "del-cli docs & jsdoc -c jsdoc.json",
+        "test": "vitest",
+        "test-ui": "vitest --ui",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
     "dependencies": {
-        "date-fns": "^3.6.0"
+        "date-fns": "^3.6.0",
+        "fs-extra": "^11.2.0"
     },
     "devDependencies": {
+        "@antfu/eslint-config": "^2.24.1",
+        "@eslint/js": "^9.8.0",
         "@vitest/ui": "^2.0.5",
+        "del-cli": "^5.1.0",
         "docdash-extended-chensuiyi": "^1.1.1",
+        "eslint": "9.x",
+        "eslint-plugin-jsdoc": "^48.10.2",
         "jsdoc": "^4.0.3",
         "lint-staged": "^15.2.7",
-        "prettier": "^3.3.3",
         "simple-git-hooks": "^2.11.1",
         "vitest": "^2.0.5"
     },
@@ -54,6 +61,6 @@
         "pre-commit": "pnpm lint-staged"
     },
     "lint-staged": {
-        "*.{js,css,scss,less,ts,jsx,vue,html,json,md,yaml}": "prettier --write"
+        "*.{js,css,scss,less,ts,jsx,vue,html,json,md,yaml}": "eslint --fix"
     }
 }
