@@ -2,9 +2,12 @@ import { readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { basename, resolve } from 'node:path';
 import { ensureFileSync, moveSync } from 'fs-extra/esm';
 
+// 路径
 const dirPath = './lib';
 const testPath = './test';
 const testPendPath = './testPend';
+
+// 存储
 const fileData = [];
 const libNames = [];
 const dirNames = [];
@@ -17,9 +20,22 @@ readdirSync(dirPath).forEach((dir) => {
         const stat = statSync(resolve(dirPath, dir, file));
         if (stat.isFile() && file.endsWith('.js')) {
             const fileName = basename(file, '.js');
+            const filePath = resolve(dirPath, dir, file);
             const testFilePath = resolve('test', dir, `${fileName}.test.js`);
             libNames.push(`yd_${dir}_${fileName}`);
             fileData.push(`export { default as yd_${dir}_${fileName} } from './lib/${dir}/${file}';\r\n`);
+            // 判断是否有相关标签
+            const fileData2 = readFileSync(filePath, { encoding: 'utf8' });
+            if (!fileData2.includes('@author')) {
+                console.log(`${filePath} 文件缺少 [作者]`);
+            }
+            if (!fileData2.includes('@category')) {
+                console.log(`${filePath} 文件缺少 [分类]`);
+            }
+            if (!fileData2.includes('@alias')) {
+                console.log(`${filePath} 文件缺少 [别名]`);
+            }
+            // 自动生成测试文件
             ensureFileSync(testFilePath);
             const testFileData = readFileSync(testFilePath, { encoding: 'utf8' });
             if (!testFileData) {
