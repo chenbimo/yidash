@@ -88,11 +88,6 @@ console.log(validNumber('1.2.')); // 1.20
 14. 尽量不要函数引入函数，每个函数尽量独立，不依赖其他函数。
 15. 除导出函数外，其余函数不能使用多行注释，只能使用单行注释。
 
-### **没有这些玩意**
-
-1. 没有 `TypeScript`。
-2. <del>没有 `Eslint`</del>。
-
 ### **函数开发规则**
 
 `lib` 目录下，每一个目录是一个函数类型集合。
@@ -106,6 +101,39 @@ console.log(validNumber('1.2.')); // 1.20
 比如 `lib/is/array.js` 函数，则其对外导出的函数名称是 `yd_is_array`。
 
 这个函数名称会自动生成，不要手动书写。
+
+**函数的JSDoc示例：**
+
+请按以下示例中的顺序写对应标签。
+
+`@author` `@category` `@alias` `@example` 是必备标签。
+
+`@alias` 标签必须写函数的导出全名，不然在文档中会有显示问题。
+
+```javascript
+/**
+ * 计算剩余时间
+ * @author 陈随易 <https://chensuiyi.me>
+ * @category 日期时间
+ * @alias yd_datetime_leftTime
+ * @param {Integer} second 剩余时间秒数
+ * @returns {Object} 返回剩余时间的不同单位值
+ * @summary 这个函数用来根据传入的时间，来计算该时间到当前时间还有多少年、多少月、多少天、等等。
+ * @example
+ * yd_datetime_leftTime(10000);
+ * 结果：{
+ *      years: 0,
+ *      months: 0,
+ *      weeks: 0,
+ *      days: 0,
+ *      hours: 2,
+ *      minutes: 166,
+ *      seconds: 10000,
+ *      text: '2 小时',
+ *      type: '还剩'
+ * }
+ */
+```
 
 ### **git提交格式**
 
