@@ -15,7 +15,8 @@ const compat = new FlatCompat({
 });
 
 const jsRules = {
-    'no-prototype-builtins': 'off'
+    'no-prototype-builtins': 'off',
+    'max-len': 'off'
 };
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -25,7 +26,8 @@ export default [
         languageOptions: { globals: { ...globals.browser, ...globals.node } },
         rules: {
             ...jsRules
-        }
+        },
+        st
     },
     ...compat.extends('plugin:prettier/recommended')
 ];
