@@ -1,10 +1,10 @@
 import { describe, it, expect } from 'vitest';
-import isOdd from '../../lib/is/odd';
+import yd_is_odd from '../../lib/is/odd';
 
-describe('odd', () => {
+describe('yd_is_odd', () => {
     it('should be `true`', () => {
-        expect(isOdd(13)).toBeTruthy();
-        expect(isOdd(-13)).toBeTruthy();
+        expect(yd_is_odd(13)).toBeTruthy();
+        expect(yd_is_odd(-13)).toBeTruthy();
     });
 
     it('should be `false`', () => {
