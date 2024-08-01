@@ -12,11 +12,11 @@
 export default (number, msg) => {
     window.onblur = function () {
         let i = number || 3;
-        i--
+        i--;
         if (i == 0) {
-            const res = msg || '切换次数超过限制'
+            const res = msg || '切换次数超过限制';
             alert(res);
         }
     };
     return window.onblur;
-}
+};

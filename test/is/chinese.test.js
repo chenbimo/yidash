@@ -4,5 +4,5 @@ import { describe, expect, it } from 'vitest';
 describe('yd_is_chinese', () => {
     it('默认单测', () => {
         expect(true).toBe(true);
-    })
+    });
 });
