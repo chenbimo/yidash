@@ -28,6 +28,6 @@ describe('yd_datetime_customFormat', () => {
 
     it('should return null and log an error if an invalid date format is used', () => {
         const result = yd_datetime_customFormat('INVALID-FORMAT');
-        expect(result).toBe('INVALID-FORMAT');
+        expect(result).toBeNull();
     });
 });
