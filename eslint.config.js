@@ -1,24 +1,10 @@
-import globals from 'globals';
-import pluginJs from '@eslint/js';
-import jsdoc from 'eslint-plugin-jsdoc';
+import jsdoc from 'eslint-plugin-jsdoc'
 
-export default [
-    {
-        //
-        languageOptions: {
-            //
-            globals: { ...globals.browser, ...globals.node }
-        }
+import antfu from '@antfu/eslint-config'
+
+export default antfu({
+    type: 'lib',
+    stylistic: {
+        indent: 4,
     },
-    jsdoc.configs['flat/recommended'],
-    pluginJs.configs.recommended,
-    {
-        files: ['**/*.js'],
-        plugins: {
-            jsdoc
-        },
-        rules: {
-            'jsdoc/require-alias': 'warn'
-        }
-    }
-];
+})
