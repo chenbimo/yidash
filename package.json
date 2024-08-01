@@ -35,8 +35,8 @@
     "scripts": {
         "gen": "node generate.js",
         "docs": "del-cli docs & jsdoc -c jsdoc.json",
-        "test": "vitest",
-        "test-ui": "vitest --ui",
+        "test": "vitest --dir test",
+        "test-ui": "vitest --ui --dir test",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "format": "prettier --write ."
