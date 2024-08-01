@@ -1,6 +1,7 @@
-import { readdirSync, writeFileSync, statSync, readFileSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { basename, resolve } from 'node:path';
 import { ensureFileSync, moveSync } from 'fs-extra/esm';
+
 const dirPath = './lib';
 const testPath = './test';
 const testPendPath = './testPend';
@@ -31,14 +32,15 @@ describe('yd_${dir}_${fileName}', () => {
     it('默认单测', () => {
         expect(true).toBe(true);
     });
-});`
-                );
+});`,
+                )
             }
-        } else {
+        }
+        else {
             console.log(`${dir}/${file}不是一个函数文件`);
         }
     });
-});
+})
 
 // 没有匹配的函数测试用例放到独立文件中
 readdirSync(testPath).forEach((dir) => {
@@ -49,7 +51,7 @@ readdirSync(testPath).forEach((dir) => {
             moveSync(resolve(testPath, dir, file), resolve(testPendPath, dir, file));
         }
     });
-});
+})
 writeFileSync('./index.js', fileData.join(''));
 writeFileSync('./yidashLibNames.js', `export const yidashLibNames = ${JSON.stringify(libNames)}`);
 console.log('数据生成完毕');

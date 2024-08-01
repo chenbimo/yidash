@@ -8,6 +8,7 @@ export default antfu({
 }, {
     rules: {
         'no-console': ['off'],
-        'semi': 2,
+        'semi': ['error', 'always'],
+        'jsdoc/check-param-names': ['error', 'always'],
     },
 })
