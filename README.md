@@ -25,7 +25,7 @@ pnpm add yidash
 `注意⚠️`：本项目暂时只提供 `ESM` 包。
 
 ```javascript
-import { yd_tree_array2Tree, yd_regexp_trainNumber, yd_number_validNumber } from 'yidash';
+import { yd_number_validNumber, yd_regexp_trainNumber, yd_tree_array2Tree } from 'yidash';
 console.dir(
     yd_tree_array2Tree([
         { id: 1, pid: 0 },
@@ -73,23 +73,25 @@ console.log(validNumber('1.2.')); // 1.20
 ### **必须这么做**
 
 1. 必须写 `JSDoc注释`，不然别人看不懂，不知道怎么用。
-2. 必须写 `函数作者`，标签为 `@author`。
-3. 必须写 `案例说明`，标签为 `@example`。
-4. 必须写 `测试用例`，在 `test目录` 下，与 `lib目录` 中的结构一一对应。
-5. 必须 `4格缩进`，不喜欢的请不要参与本项目。
-6. 必须按 `git提交格式` 写清楚提交信息。
-7. 必须 `一个函数一个文件`，不能多个导出函数写到一个文件中。
-8. 函数名称必须清楚地表达函数作用。
-9. 函数必须使用 `default` 默认导出，且导出的必须是一个 `箭头函数`。
-10. 能用 `const` 定义的地方尽量用 `const`。
-11. 不能使用 `var` 定义变量。
-12. `不要炫技`，用尽量简单易懂的方式，宁愿多写几行，也不要增加理解难度。
-13. 尽量不要函数引入函数，每个函数尽量独立，不依赖其他函数。
+2. 必须写 `函数作者`，标签为 `@author`，如 `@author chensuiyi`。
+3. 必须写 `函数别名`，标签为 `@alias`，如 `@alias yd_is_array`。
+4. 必须写 `案例说明`，标签为 `@example`，如 `@example yd_is_array([1,2,3])`。
+5. 必须写 `测试用例`，在 `test目录` 下，与 `lib目录` 中的结构一一对应。
+6. 必须 `4格缩进`，不喜欢的请不要参与本项目。
+7. 必须按 `git提交格式` 写清楚提交信息。
+8. 必须 `一个函数一个文件`，不能多个导出函数写到一个文件中。
+9. 函数名称必须清楚地表达函数作用。
+10. 函数必须使用 `default` 默认导出，且导出的必须是一个 `箭头函数`。
+11. 能用 `const` 定义的地方尽量用 `const`。
+12. 不能使用 `var` 定义变量。
+13. `不要炫技`，用尽量简单易懂的方式，宁愿多写几行，也不要增加理解难度。
+14. 尽量不要函数引入函数，每个函数尽量独立，不依赖其他函数。
+15. 除导出函数外，其余函数不能使用多行注释，只能使用单行注释。
 
 ### **没有这些玩意**
 
 1. 没有 `TypeScript`。
-2. 没有 `Eslint`。
+2. <del>没有 `Eslint`</del>。
 
 ### **函数开发规则**
 
@@ -127,14 +129,3 @@ console.log(validNumber('1.2.')); // 1.20
 
 1. 每个注册用户可以免费领取一个永久注册码（登录自动领取）。
 2. 每个贡献者可以额外领取一个（私聊我即可）。
-
-### 贡献者
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
