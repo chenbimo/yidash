@@ -1,6 +1,6 @@
 import { readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { basename, resolve } from 'node:path';
-import { ensureFileSync, moveSync } from 'fs-extra/esm';
+import { ensureFileSync, moveSync, readJsonSync } from 'fs-extra/esm';
 
 // 路径
 const dirPath = './lib';
@@ -11,12 +11,17 @@ const testPendPath = './testPend';
 const fileData = [];
 const libNames = [];
 const dirNames = [];
+const categories = {};
 
 // 自动生成导出和单文件
 readdirSync(dirPath).forEach((dir) => {
     dirNames.push(dir);
+    const metaFile = resolve(dirPath, dir, '_meta.json');
+    const metaData = readJsonSync(metaFile);
+    categories[dir] = { displayName: metaData.name };
     const files = readdirSync(resolve(dirPath, dir));
     files.forEach((file) => {
+        if (file === '_meta.json') return;
         const stat = statSync(resolve(dirPath, dir, file));
         if (stat.isFile() && file.endsWith('.js')) {
             const fileName = basename(file, '.js');
@@ -70,6 +75,7 @@ readdirSync(testPath).forEach((dir) => {
         }
     });
 });
+writeFileSync('./categories.json', JSON.stringify(categories));
 writeFileSync('./index.js', fileData.join(''));
 writeFileSync('./yidashLibNames.js', `export const yidashLibNames = ${JSON.stringify(libNames)}`);
 console.log('数据生成完毕');
