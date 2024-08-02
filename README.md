@@ -2,7 +2,7 @@
 
 `警告⚠️`：未发布 **v2.0.0** 之前，均为不稳定版本，慎用！！！
 
-![logo](https://static.yicode.tech/logo/yidash.png)
+![logo](https://static.yicode.tech/logo/yidash2.png)
 
 ## 🏠 官网
 
@@ -115,8 +115,8 @@ console.log(validNumber('1.2.')); // 1.20
  * @author 陈随易 <https://chensuiyi.me>
  * @category 日期时间
  * @alias yd_datetime_leftTime
- * @param {Integer} second 剩余时间秒数
- * @returns {Object} 返回剩余时间的不同单位值
+ * @param {number} seconds 剩余时间秒数
+ * @returns {object} 返回剩余时间的不同单位值
  * @summary 这个函数用来根据传入的时间，来计算该时间到当前时间还有多少年、多少月、多少天、等等。
  * @example
  * yd_datetime_leftTime(10000);
