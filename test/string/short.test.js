@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import yd_string_short from '../../lib/string/short.js';
+// import yd_string_short from '../../lib/string/short.js';
 
 describe('yd_string_short', () => {
     it('默认单测', () => {

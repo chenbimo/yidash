@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import convertUnits from '../../lib/number/convertUnits.js'; // 修改路径为你的文件路径
+import convertUnits from '../../lib/number/convertUnits.js';
 
 describe('Unit Conversion Tests', () => {
     it('should convert meters to kilometers', () => {

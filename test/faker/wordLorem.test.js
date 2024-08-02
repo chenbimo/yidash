@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import yd_faker_wordLorem from '../../lib/faker/wordLorem.js';
+// import yd_faker_wordLorem from '../../lib/faker/wordLorem.js';
 
 describe('yd_faker_wordLorem', () => {
     it('默认单测', () => {

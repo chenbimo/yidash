@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import yd_browser_exitFullScreen from '../../lib/browser/exitFullScreen.js';
+// import yd_browser_exitFullScreen from '../../lib/browser/exitFullScreen.js';
 
 describe('yd_browser_exitFullScreen', () => {
     it('默认单测', () => {

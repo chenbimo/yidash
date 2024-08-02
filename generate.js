@@ -49,8 +49,8 @@ readdirSync(dirPath).forEach((dir) => {
             if (!testFileData) {
                 writeFileSync(
                     testFilePath,
-                    `import { describe, it, expect } from 'vitest';
-import yd_${dir}_${fileName} from '../../lib/${dir}/${fileName}.js';
+                    `import { describe, expect, it } from 'vitest';
+// import yd_${dir}_${fileName} from '../../lib/${dir}/${fileName}.js';
 
 describe('yd_${dir}_${fileName}', () => {
     it('默认单测', () => {
