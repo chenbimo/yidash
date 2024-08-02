@@ -37,8 +37,8 @@
         "docs": "del-cli docs & jsdoc -c jsdoc.json",
         "test": "vitest --dir lib",
         "test-ui": "vitest --ui --dir lib",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix",
+        "lint": "eslint ./lib",
+        "lint:fix": "eslint ./lib --fix",
         "format": "prettier --write .",
         "inspect": "eslint --inspect-config"
     },

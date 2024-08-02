@@ -1,33 +1,25 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
-import { FlatCompat } from '@eslint/eslintrc';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
-// mimic CommonJS variables -- not needed if using CommonJS
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    resolvePluginsRelativeTo: __dirname,
-    recommendedConfig: pluginJs.configs.recommended
-});
-
-const jsRules = {
-    'no-prototype-builtins': 'off',
-    'max-len': 'off'
-};
-
-/** @type {import('eslint').Linter.Config[]} */
 export default [
+    //
     {
+        //
         files: ['**/*.{mjs,cjs,js}'],
-        languageOptions: { globals: { ...globals.browser, ...globals.node } },
-        rules: {
-            ...jsRules
+        languageOptions: {
+            globals: {
+                ...globals.browser,
+                ...globals.node,
+                document: 'readonly'
+            }
         },
-        st
+        rules: {
+            'no-prototype-builtins': 'off',
+            'max-len': 'off',
+            'linebreak-style': ['error', 'unix']
+        }
     },
-    ...compat.extends('plugin:prettier/recommended')
+    pluginJs.configs.recommended,
+    eslintPluginPrettierRecommended
 ];
