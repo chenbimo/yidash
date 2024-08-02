@@ -2,7 +2,7 @@
 
 `警告⚠️`：未发布 **v2.0.0** 之前，均为不稳定版本，慎用！！！
 
-![logo](https://static.yicode.tech/logo/yidash.png)
+![logo](https://static.yicode.tech/logo/yidash2.png)
 
 ## 🏠 官网
 
