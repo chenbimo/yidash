@@ -55,10 +55,10 @@ console.log(validNumber('1.2.')); // 1.20
 ### **代码贡献步骤**
 
 1. 访问本仓库。
-2. fork本仓库。
+2. fork本仓库main分支。
 3. 拉取fork后的仓库。
 4. 修改代码。
-5. push代码。
+5. push代码到。
 6. 发起pull request。
 7. 等待笔者验证与合并。
 
