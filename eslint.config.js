@@ -10,13 +10,16 @@ export default [
                 ...globals.browser,
                 ...globals.node
             }
-        },
-        rules: {
-            'no-prototype-builtins': 'off',
-            'max-len': 'off',
-            'linebreak-style': ['error', 'unix']
         }
     },
     pluginJs.configs.recommended,
-    eslintPluginPrettierRecommended
+    eslintPluginPrettierRecommended,
+    {
+        rules: {
+            'no-prototype-builtins': 'off',
+            'max-len': 'off',
+            'no-unused-vars': 'off',
+            'linebreak-style': ['error', 'unix']
+        }
+    }
 ];
