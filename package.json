@@ -1,7 +1,7 @@
 {
     "name": "yidash",
     "type": "module",
-    "version": "1.3.2",
+    "version": "1.4.0",
     "private": false,
     "description": "yidash（易大师）一万个JavaScript实用方法库",
     "publishConfig": {
@@ -25,26 +25,29 @@
         "./yidashLibNames.js": "./yidashLibNames.js"
     },
     "files": [
-        "LICENSE",
-        "README.md",
-        "index.js",
+        "config/",
         "lib/",
+        "index.js",
+        "LICENSE",
         "package.json",
+        "README.md",
         "yidashLibNames.js"
     ],
     "scripts": {
         "gen": "node generate.js",
         "docs": "del-cli docs & jsdoc -c jsdoc.json",
-        "test": "vitest --dir test",
-        "test-ui": "vitest --ui --dir test",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix",
-        "format": "prettier --write ."
+        "test": "vitest --dir lib",
+        "test-ui": "vitest --ui --dir lib",
+        "lint": "eslint ./lib",
+        "lint:fix": "eslint ./lib --fix",
+        "format": "prettier --write .",
+        "inspect": "eslint --inspect-config"
     },
     "dependencies": {
         "date-fns": "^3.6.0"
     },
     "devDependencies": {
+        "@eslint/config-inspector": "^0.5.2",
         "@eslint/eslintrc": "^3.1.0",
         "@eslint/js": "^9.8.0",
         "@vitest/ui": "^2.0.5",
