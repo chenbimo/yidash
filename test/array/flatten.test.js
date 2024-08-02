@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import yd_array_flatten from '../../lib/array/flatten.js';
+// import yd_array_flatten from '../../lib/array/flatten.js';
 
 describe('yd_array_flatten', () => {
     it('默认单测', () => {

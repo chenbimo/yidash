@@ -1,6 +1,6 @@
 import { readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { basename, resolve } from 'node:path';
-import { ensureFileSync, moveSync } from 'fs-extra/esm';
+import { ensureFileSync, moveSync, readJsonSync } from 'fs-extra/esm';
 
 // 路径
 const dirPath = './lib';
@@ -11,19 +11,27 @@ const testPendPath = './testPend';
 const fileData = [];
 const libNames = [];
 const dirNames = [];
+const categories = {};
 
 // 自动生成导出和单文件
 readdirSync(dirPath).forEach((dir) => {
     dirNames.push(dir);
+    const metaFile = resolve(dirPath, dir, '_meta.json');
+    const metaData = readJsonSync(metaFile);
+    categories[dir] = { displayName: metaData.name };
     const files = readdirSync(resolve(dirPath, dir));
     files.forEach((file) => {
+        if (file === '_meta.json') return;
         const stat = statSync(resolve(dirPath, dir, file));
         if (stat.isFile() && file.endsWith('.js')) {
             const fileName = basename(file, '.js');
             const filePath = resolve(dirPath, dir, file);
             const testFilePath = resolve('test', dir, `${fileName}.test.js`);
             libNames.push(`yd_${dir}_${fileName}`);
-            fileData.push(`export { default as yd_${dir}_${fileName} } from './lib/${dir}/${file}';\r\n`);
+            fileData.push(
+                //
+                `export { default as yd_${dir}_${fileName} } from './lib/${dir}/${file}';\r\n`
+            );
             // 判断是否有相关标签
             const fileData2 = readFileSync(filePath, { encoding: 'utf8' });
             if (!fileData2.includes('@author')) {
@@ -41,22 +49,21 @@ readdirSync(dirPath).forEach((dir) => {
             if (!testFileData) {
                 writeFileSync(
                     testFilePath,
-                    `import { describe, it, expect } from 'vitest';
-import yd_${dir}_${fileName} from '../../lib/${dir}/${fileName}.js';
+                    `import { describe, expect, it } from 'vitest';
+// import yd_${dir}_${fileName} from '../../lib/${dir}/${fileName}.js';
 
 describe('yd_${dir}_${fileName}', () => {
     it('默认单测', () => {
         expect(true).toBe(true);
     });
-});`,
-                )
+});`
+                );
             }
-        }
-        else {
+        } else {
             console.log(`${dir}/${file}不是一个函数文件`);
         }
     });
-})
+});
 
 // 没有匹配的函数测试用例放到独立文件中
 readdirSync(testPath).forEach((dir) => {
@@ -67,7 +74,8 @@ readdirSync(testPath).forEach((dir) => {
             moveSync(resolve(testPath, dir, file), resolve(testPendPath, dir, file));
         }
     });
-})
+});
+writeFileSync('./categories.json', JSON.stringify(categories));
 writeFileSync('./index.js', fileData.join(''));
 writeFileSync('./yidashLibNames.js', `export const yidashLibNames = ${JSON.stringify(libNames)}`);
 console.log('数据生成完毕');
