@@ -3,9 +3,7 @@ import pluginJs from '@eslint/js';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default [
-    //
     {
-        //
         files: ['**/*.{mjs,cjs,js}'],
         languageOptions: {
             globals: {
