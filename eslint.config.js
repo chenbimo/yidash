@@ -8,8 +8,7 @@ export default [
         languageOptions: {
             globals: {
                 ...globals.browser,
-                ...globals.node,
-                document: 'readonly'
+                ...globals.node
             }
         },
         rules: {
