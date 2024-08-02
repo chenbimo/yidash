@@ -25,7 +25,7 @@ describe('yd_array_randomItem', () => {
         const testFunc = () => {
             yd_array_randomItem(array, 4, false);
         };
-        expect(testFunc).toThrow('所需数量超出数组的不重复元素数量');
+        expect(testFunc).toThrow('所需不重复元素数量超过了数组中不重复元素的数量');
     });
 
     it('when repeat is true and the required number exceeds the number of non repeating elements in the array, return a duplicate item', () => {
