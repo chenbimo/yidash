@@ -36,6 +36,14 @@
                 "class": "menu-item",
                 "id": "repository"
             }
+        },
+        "openGraph": {
+            // Open Graph options (mostly for Facebook and other sites to easily extract meta information)
+            "title": "", // Title of the website
+            "type": "website", // Type of the website
+            "image": "https://static.yicode.tech/logo/yidash2.png", // Main image/logo
+            "site_name": "", // Site name
+            "url": "" // Main canonical URL for the main page of the site
         }
     }
 }
