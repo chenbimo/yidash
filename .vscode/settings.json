@@ -7,6 +7,9 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
         "*.js": "${capture}.*.js"

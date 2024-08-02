@@ -1,11 +1,9 @@
 import { readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { basename, resolve } from 'node:path';
-import { ensureFileSync, moveSync, readJsonSync } from 'fs-extra/esm';
+import { readJsonSync } from 'fs-extra/esm';
 
 // 路径
 const dirPath = './lib';
-const testPath = './test';
-const testPendPath = './testPend';
 
 // 存储
 const fileData = [];
