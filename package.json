@@ -1,7 +1,7 @@
 {
     "name": "yidash",
     "type": "module",
-    "version": "1.3.2",
+    "version": "1.4.0",
     "private": false,
     "description": "yidash（易大师）一万个JavaScript实用方法库",
     "publishConfig": {
@@ -25,11 +25,12 @@
         "./yidashLibNames.js": "./yidashLibNames.js"
     },
     "files": [
-        "LICENSE",
-        "README.md",
-        "index.js",
+        "config/",
         "lib/",
+        "index.js",
+        "LICENSE",
         "package.json",
+        "README.md",
         "yidashLibNames.js"
     ],
     "scripts": {
