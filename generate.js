@@ -44,21 +44,21 @@ readdirSync(dirPath).forEach((dir) => {
                 console.log(`${filePath} 文件缺少 [别名]`);
             }
             // 自动生成测试文件
-            ensureFileSync(testFilePath);
-            const testFileData = readFileSync(testFilePath, { encoding: 'utf8' });
-            if (!testFileData) {
-                writeFileSync(
-                    testFilePath,
-                    `import { describe, expect, it } from 'vitest';
-// import yd_${dir}_${fileName} from '../../lib/${dir}/${fileName}.js';
+            //             ensureFileSync(testFilePath);
+            //             const testFileData = readFileSync(testFilePath, { encoding: 'utf8' });
+            //             if (!testFileData) {
+            //                 writeFileSync(
+            //                     testFilePath,
+            //                     `import { describe, expect, it } from 'vitest';
+            // // import yd_${dir}_${fileName} from '../../lib/${dir}/${fileName}.js';
 
-describe('yd_${dir}_${fileName}', () => {
-    it('默认单测', () => {
-        expect(true).toBe(true);
-    });
-});`
-                );
-            }
+            // describe('yd_${dir}_${fileName}', () => {
+            //     it('默认单测', () => {
+            //         expect(true).toBe(true);
+            //     });
+            // });`
+            //                 );
+            //             }
         } else {
             console.log(`${dir}/${file}不是一个函数文件`);
         }
@@ -66,15 +66,15 @@ describe('yd_${dir}_${fileName}', () => {
 });
 
 // 没有匹配的函数测试用例放到独立文件中
-readdirSync(testPath).forEach((dir) => {
-    const files = readdirSync(resolve(testPath, dir));
-    files.forEach((file) => {
-        const fileName = basename(file, '.test.js');
-        if (libNames.includes(`yd_${dir}_${fileName}`) === false) {
-            moveSync(resolve(testPath, dir, file), resolve(testPendPath, dir, file));
-        }
-    });
-});
+// readdirSync(testPath).forEach((dir) => {
+//     const files = readdirSync(resolve(testPath, dir));
+//     files.forEach((file) => {
+//         const fileName = basename(file, '.test.js');
+//         if (libNames.includes(`yd_${dir}_${fileName}`) === false) {
+//             moveSync(resolve(testPath, dir, file), resolve(testPendPath, dir, file));
+//         }
+//     });
+// });
 writeFileSync('./categories.json', JSON.stringify(categories));
 writeFileSync('./index.js', fileData.join(''));
 writeFileSync('./yidashLibNames.js', `export const yidashLibNames = ${JSON.stringify(libNames)}`);
