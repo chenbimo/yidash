@@ -55,7 +55,9 @@
         "docdash-extended-chensuiyi": "^1.1.1",
         "eslint": "^9.8.0",
         "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-jsdoc": "^48.11.0",
         "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-regexp": "^2.6.0",
         "fs-extra": "^11.2.0",
         "globals": "^15.9.0",
         "jsdoc": "^4.0.3",
@@ -66,9 +68,14 @@
         "vitest": "^2.0.5"
     },
     "simple-git-hooks": {
-        "pre-commit": "pnpm lint-staged"
+        "pre-commit": "pnpm exec lint-staged --concurrent false"
     },
     "lint-staged": {
-        "*": "prettier --write ."
+        "*": [
+            "prettier --write --cache --ignore-unknown"
+        ],
+        "lib/**/*.js": [
+            "eslint --cache --fix"
+        ]
     }
 }
