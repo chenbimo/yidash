@@ -1,6 +1,7 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import * as regexpPlugin from 'eslint-plugin-regexp';
 import jsdoc from 'eslint-plugin-jsdoc';
 
 export default [
@@ -15,6 +16,7 @@ export default [
     },
     pluginJs.configs.recommended,
     eslintPluginPrettierRecommended,
+    regexpPlugin.configs['flat/recommended'],
     jsdoc.configs['flat/recommended'],
     {
         rules: {
