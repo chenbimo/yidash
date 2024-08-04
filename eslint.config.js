@@ -42,6 +42,7 @@ export default [
                                 'alias',
                                 'category',
                                 'params',
+                                'param',
                                 'return',
                                 'returns',
                                 'version',
