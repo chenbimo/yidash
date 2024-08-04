@@ -103,11 +103,11 @@ console.log(validNumber('1.2.')); // 1.20
 
 **函数的JSDoc示例：**
 
-请按以下示例中的顺序写对应标签。
-
 `@author` `@category` `@alias` `@example` 是必备标签。
 
 `@alias` 标签必须写函数的导出全名，不然在文档中会有显示问题。
+
+标签顺序已添加eslint规则，会自动进行排序。
 
 ```javascript
 /**

@@ -1,33 +1,63 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
-import { FlatCompat } from '@eslint/eslintrc';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import * as regexpPlugin from 'eslint-plugin-regexp';
+import jsdoc from 'eslint-plugin-jsdoc';
 
-// mimic CommonJS variables -- not needed if using CommonJS
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    resolvePluginsRelativeTo: __dirname,
-    recommendedConfig: pluginJs.configs.recommended
-});
-
-const jsRules = {
-    'no-prototype-builtins': 'off',
-    'max-len': 'off'
-};
-
-/** @type {import('eslint').Linter.Config[]} */
 export default [
     {
         files: ['**/*.{mjs,cjs,js}'],
-        languageOptions: { globals: { ...globals.browser, ...globals.node } },
-        rules: {
-            ...jsRules
-        },
-        st
+        languageOptions: {
+            globals: {
+                ...globals.browser,
+                ...globals.node
+            }
+        }
     },
-    ...compat.extends('plugin:prettier/recommended')
+    pluginJs.configs.recommended,
+    eslintPluginPrettierRecommended,
+    regexpPlugin.configs['flat/recommended'],
+    jsdoc.configs['flat/recommended'],
+    {
+        rules: {
+            'no-prototype-builtins': 'off',
+            'max-len': 'off',
+            'no-unused-vars': 'off',
+            'linebreak-style': ['error', 'unix'],
+            'jsdoc/require-example': 1,
+            'jsdoc/check-tag-names': [
+                'error',
+                {
+                    definedTags: ['category']
+                }
+            ],
+            'jsdoc/sort-tags': [
+                'error',
+                {
+                    linesBetween: 1,
+                    tagSequence: [
+                        {
+                            tags: [
+                                //
+                                'alias',
+                                'category',
+                                'params',
+                                'return',
+                                'returns',
+                                'version',
+                                'deprecated',
+                                'since',
+                                'author',
+                                'summary',
+                                'describe',
+                                'todo',
+                                'example',
+                                '-other'
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
 ];
