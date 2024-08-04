@@ -73,9 +73,6 @@
     "lint-staged": {
         "*": [
             "prettier --write --cache --ignore-unknown"
-        ],
-        "lib/**/*.js": [
-            "eslint --cache --fix"
         ]
     }
 }
