@@ -6,3 +6,4 @@ yidashLibNames.js
 .idea
 categories.json
 *.lock
+.eslintcache
