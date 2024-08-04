@@ -6,3 +6,5 @@ yidashLibNames.js
 .idea
 categories.json
 *.DS_Store
+*.lock
+.eslintcache
