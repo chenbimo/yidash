@@ -44,7 +44,8 @@
         "inspect": "eslint --inspect-config"
     },
     "dependencies": {
-        "date-fns": "^3.6.0"
+        "date-fns": "^3.6.0",
+        "dayjs": "^1.11.12"
     },
     "devDependencies": {
         "@eslint/config-inspector": "^0.5.2",
