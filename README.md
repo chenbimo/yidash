@@ -137,13 +137,13 @@ console.log(validNumber('1.2.')); // 1.20
 
 ### **git提交格式**
 
-`提交主题: 提交具体内容`
+能够明确表达提交的内容就行
 
 举例：
 
--   `完善功能: yd_is_number函数增加判断机制`
--   `代码重构: yd_number_thousands重新设计`
--   `新增函数: 增加yd_is_array函数`
+-   yd_is_number函数增加判断机制
+-   yd_number_thousands重新设计
+-   增加yd_is_array函数
 
 ### **贡献者福利**
 
