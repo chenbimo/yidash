@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import yd_file_fileInfo from './fileInfo.js';
+import yd_file_fileInfo from '../lib/file/fileInfo.js';
 
 describe('yd_file_fileInfo', () => {
     it('解析文件路径信息', () => {

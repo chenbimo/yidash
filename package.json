@@ -36,8 +36,8 @@
     "scripts": {
         "gen": "node generate.js",
         "docs": "del-cli docs & jsdoc -c jsdoc.json",
-        "test": "vitest --dir lib",
-        "test-ui": "vitest --ui --dir lib",
+        "test": "vitest",
+        "test-ui": "vitest --ui",
         "lint": "eslint ./lib",
         "lint:fix": "eslint ./lib --fix",
         "format": "prettier --write .",
@@ -60,6 +60,7 @@
         "eslint-plugin-regexp": "^2.6.0",
         "fs-extra": "^11.2.0",
         "globals": "^15.9.0",
+        "happy-dom": "^14.12.3",
         "jsdoc": "^4.0.3",
         "lint-staged": "^15.2.7",
         "log-symbols": "^6.0.0",
