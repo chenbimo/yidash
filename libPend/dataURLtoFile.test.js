@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import yd_file_dataURLtoFile from './yd_file_dataURLtoFile.js';
+import yd_file_dataURLtoFile from '../lib/file/dataURLtoFile.js';
 
 describe('yd_file_dataURLtoFile', () => {
     it('将Base64 DataURL转换为文件对象', () => {
