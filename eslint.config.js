@@ -24,6 +24,7 @@ export default [
             'max-len': 'off',
             'no-unused-vars': 'off',
             'linebreak-style': ['error', 'unix'],
+            'jsdoc/require-jsdoc': 'off',
             'jsdoc/require-example': 1,
             'jsdoc/check-tag-names': [
                 'error',
