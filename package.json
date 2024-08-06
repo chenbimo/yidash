@@ -70,7 +70,7 @@
         "vitest": "^2.0.5"
     },
     "simple-git-hooks": {
-        "pre-commit": "pnpm exec lint-staged --concurrent false"
+        "pre-commit": "pnpm exec lint-staged"
     },
     "lint-staged": {
         "*": [
