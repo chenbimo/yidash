@@ -157,3 +157,9 @@ console.log(validNumber('1.2.')); // 1.20
 
 1. 每个注册用户可以免费领取一个永久注册码（登录自动领取）。
 2. 每个贡献者可以额外领取一个（私聊我即可）。
+
+### **贡献者**
+
+<a href="https://github.com/cycleccc/wangEditor-next/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=cycleccc/wangEditor-next" />
+</a>
