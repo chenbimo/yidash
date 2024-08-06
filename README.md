@@ -160,6 +160,6 @@ console.log(validNumber('1.2.')); // 1.20
 
 ### **贡献者**
 
-<a href="https://github.com/cycleccc/wangEditor-next/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cycleccc/wangEditor-next" />
+<a href="https://github.com/chenbimo/yidash/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=chenbimo/yidash" />
 </a>
