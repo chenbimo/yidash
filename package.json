@@ -21,8 +21,12 @@
         "help"
     ],
     "exports": {
-        ".": "./index.js",
-        "./yidashLibNames.js": "./yidashLibNames.js"
+        ".": "./lib.js",
+        "./node": "./libNode.js",
+        "./browser": "./libBrowser.js",
+        "./libNames.js": "./libNames.js",
+        "./libNodeNames.js": "./libNodeNames.js",
+        "./libBrowserNames.js": "./libBrowserNames.js"
     },
     "files": [
         "config/",
@@ -70,7 +74,7 @@
         "vitest": "^2.0.5"
     },
     "simple-git-hooks": {
-        "pre-commit": "pnpm exec lint-staged --concurrent false"
+        "pre-commit": "pnpm exec lint-staged"
     },
     "lint-staged": {
         "*": [
