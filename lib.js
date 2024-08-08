@@ -146,3 +146,4 @@ export { default as yd_url_parse } from './lib/url/parse.js';
 export { default as yd_url_urlDecode } from './lib/url/urlDecode.js';
 export { default as yd_url_urlEncode } from './lib/url/urlEncode.js';
 export { default as yd_url_valid } from './lib/url/valid.js';
+export { default as yd_browser_scrollToTop } from './lib/browser/scrollToTop.js';
