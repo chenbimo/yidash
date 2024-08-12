@@ -3,6 +3,7 @@
     "type": "module",
     "version": "1.4.0",
     "private": false,
+    "license": "MIT",
     "description": "yidash（易大师）一万个JavaScript实用方法库",
     "publishConfig": {
         "access": "public",
