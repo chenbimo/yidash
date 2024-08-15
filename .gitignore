@@ -2,7 +2,12 @@ node_modules
 docs
 *lock.*
 index.js
-yidashLibNames.js
+lib.js
+libNames.js
+libNode.js
+libNodeNames.js
+libBrowser.js
+libBrowserNames.js
 .idea
 categories.json
 *.DS_Store

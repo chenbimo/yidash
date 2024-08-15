@@ -36,7 +36,12 @@
         "LICENSE",
         "package.json",
         "README.md",
-        "yidashLibNames.js"
+        "lib.js",
+        "libNames.js",
+        "libNode.js",
+        "libNodeNames.js",
+        "libBrowser.js",
+        "libBrowserNames.js"
     ],
     "scripts": {
         "gen": "node generate.js",
