@@ -4,7 +4,7 @@
  * @param {string} [filename] 文件名 默认使用页面标题
  * @param {boolean} [isURL] 传入的字符串是否为下载链接。(否则将作为文本内容下载) 默认为`false`
  */
-export default (content, filename = document.title, isURL = 'false') => {
+export default (content, filename = document.title, isURL) => {
     if (content === void 0 || content === null) throw new TypeError('无下载内容！');
     const anchor = document.createElement('a');
     // 将数值类型与布尔类型转为字符串
