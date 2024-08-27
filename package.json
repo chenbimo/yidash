@@ -25,13 +25,15 @@
         ".": "./lib.js",
         "./node": "./libNode.js",
         "./browser": "./libBrowser.js",
-        "./libNames.js": "./libNames.js",
-        "./libNodeNames.js": "./libNodeNames.js",
-        "./libBrowserNames.js": "./libBrowserNames.js"
+        "./libNames": "./libNames.js",
+        "./libNodeNames": "./libNodeNames.js",
+        "./libBrowserNames": "./libBrowserNames.js"
     },
     "files": [
         "config/",
         "lib/",
+        "libNode/",
+        "libBrowser/",
         "index.js",
         "LICENSE",
         "package.json",
