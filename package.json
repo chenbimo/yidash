@@ -1,7 +1,7 @@
 {
     "name": "yidash",
     "type": "module",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "private": false,
     "license": "MIT",
     "description": "yidash（易大师）一万个JavaScript实用方法库",
