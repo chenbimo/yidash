@@ -6,7 +6,7 @@
 
 ## 🏠 官网
 
-[文档官网 https://yidash.dev](https://yidash.dev)
+[文档官网 https://yidash.yicode.tech](https://yidash.yicode.tech)
 
 ## 🛖 仓库
 
