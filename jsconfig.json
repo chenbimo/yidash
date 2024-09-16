@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "baseUrl": "./",
+        "paths": {}
+    },
+    "exclude": ["**/node_modules/*", "dist", "**/dist/*", "dist", "dist*", "node_modules", "release", "cache", ".git", ".cache", "logs"]
+}
