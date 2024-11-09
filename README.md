@@ -94,13 +94,8 @@ console.log(validNumber('1.2.')); // 1.20
 
 目前用到的依赖如下：
 
-1. lodash-es
 2. es-toolkit
 3. date-fns
-
-因为es-toolkit还在开发中，所以部分函数用lodash-es中的。
-
-最终目标是所有基础函数都用es-toolkit中的。
 
 `lib` 目录下，每一个目录是一个函数类型集合。
 
