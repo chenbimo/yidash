@@ -1,7 +1,7 @@
 {
     "name": "yidash",
     "type": "module",
-    "version": "1.11.0",
+    "version": "1.12.1",
     "private": false,
     "license": "MIT",
     "description": "yidash（易大师）一万个JavaScript实用方法库",
@@ -23,52 +23,40 @@
     ],
     "exports": {
         ".": "./lib.js",
-        "./libNames": "./libNames.js"
+        "./node": "./libNode.js",
+        "./browser": "./libBrowser.js"
     },
     "files": [
         "config/",
         "lib/",
+        "libNode/",
+        "libBrowser/",
         "index.js",
         "LICENSE",
         "package.json",
         "README.md",
         "lib.js",
-        "libNames.js"
+        "libNode.js",
+        "libBrowser.js"
     ],
     "scripts": {
         "gen": "node generate.js",
-        "docs": "del-cli docs & jsdoc -c jsdoc.json",
-        "test": "vitest",
-        "test-ui": "vitest --ui",
-        "lint": "eslint ./lib",
-        "lint:fix": "eslint ./lib --fix",
-        "format": "prettier --write .",
-        "inspect": "eslint --inspect-config"
+        "docs": "del-cli docs & jsdoc -c jsdoc.json"
     },
     "dependencies": {
         "date-fns": "^4.1.0",
         "es-toolkit": "^1.27.0"
     },
     "devDependencies": {
-        "@eslint/config-inspector": "^0.5.6",
-        "@eslint/js": "^9.15.0",
-        "@vitest/ui": "^2.1.6",
         "colorette": "^2.0.20",
         "del-cli": "^6.0.0",
         "docdash-extended-chensuiyi": "^1.1.1",
-        "eslint": "^9.15.0",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-jsdoc": "^50.6.0",
-        "eslint-plugin-prettier": "^5.2.1",
-        "eslint-plugin-regexp": "^2.7.0",
         "fs-extra": "^11.2.0",
-        "globals": "^15.12.0",
         "jsdoc": "^4.0.4",
         "lint-staged": "^15.2.10",
         "log-symbols": "^7.0.0",
         "prettier": "^3.4.1",
-        "simple-git-hooks": "^2.11.1",
-        "vitest": "^2.1.6"
+        "simple-git-hooks": "^2.11.1"
     },
     "simple-git-hooks": {
         "pre-commit": "pnpm exec lint-staged"
